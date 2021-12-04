@@ -19,6 +19,18 @@
         android:title="Tercer"
         />
 
+    <item
+        android:id="@+id/fourthFragment"
+        android:icon="@android:drawable/ic_lock_idle_alarm"
+        android:title="Cuarto"
+        />
+
+    <item
+        android:id="@+id/fifthFragment"
+        android:icon="@android:drawable/ic_lock_idle_alarm"
+        android:title="Quinto"
+        />
+
 
 
 
