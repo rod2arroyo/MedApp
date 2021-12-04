@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1025590085426",
+    "project_id": "medapp-1351d",
+    "storage_bucket": "medapp-1351d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025590085426:android:e576a019d498e5483bf92b",
+        "android_client_info": {
+          "package_name": "com.example.medapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025590085426-ifbh1gsbu2i0s30oisqcsinbukk5q7b1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5lfogGzNxn6asm32yb0h4p6j0PMqkJmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025590085426-ifbh1gsbu2i0s30oisqcsinbukk5q7b1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
