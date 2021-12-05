@@ -1,15 +1,17 @@
 package com.example.medapp
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import com.example.medapp.model.CitasManager
-import com.example.medapp.model.ContactosManager
-import com.example.medapp.model.LoginManager
-import com.example.medapp.model.MedicinasManager
+import android.widget.Toast
+import com.example.medapp.model.*
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class SignupActivity : Activity() {
 
@@ -19,40 +21,75 @@ class SignupActivity : Activity() {
 
         val btnRegistrar = findViewById<Button>(R.id.btnRegistrar)
 
-        //val txtUsuario =
-        //val txtPassword =
+        val userActual = findViewById<EditText>(R.id.txt_usuario)
 
+        var nombre = ""
+        var final = false
+        var nombreActual = findViewById<EditText>(R.id.txt_usuario).text.toString()
+        val dbFirebase = Firebase.firestore
         btnRegistrar.setOnClickListener{v : View ->
-            LoginManager.instance.saveUser(
-                findViewById<EditText>(R.id.txt_usuario).text.toString(),
-                findViewById<EditText>(R.id.txt_password).text.toString(),
-                {},
-                {}
-            )
 
-            CitasManager.instance.createCitas(
-                findViewById<EditText>(R.id.txt_usuario).text.toString(),
-                "",
-                "",
-                "",
-            )
+            dbFirebase.collection("Usuarios")
+                .get()
+                .addOnSuccessListener { res ->
+                    val listNames = arrayListOf<String>()
+                    for (document in res) {
+                        nombre = document.data["usuario"]!! as String
+                        listNames.add(nombre)
+                    }
 
-            ContactosManager.instance.createContactos(
-                findViewById<EditText>(R.id.txt_usuario).text.toString(),
-                "",
-                "",
-                "",
-            )
+                    for(i in 0 until listNames.size){
+                        if(findViewById<EditText>(R.id.txt_usuario).text.toString() == listNames[i]){
+                            final = true
+                        }
+                    }
 
-            MedicinasManager.instance.createMedicinas(
-                findViewById<EditText>(R.id.txt_usuario).text.toString(),
-                "",
-                "",
-                "",
-            )
+                    if(userActual.text.toString() == ""){
+                        Toast.makeText(this,"Esta vacio el espacio", Toast.LENGTH_SHORT).show()
+                    }else if(final!!){
+                        final = false
+                        println("SALIO ESTA COSA $final")
+                        Toast.makeText(this,"Ya esta registrada", Toast.LENGTH_SHORT).show()
+                    }else if(!final!!){
+                        final = true
+                        LoginManager.instance.saveUser(
+                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
+                            findViewById<EditText>(R.id.txt_password).text.toString(),
+                            {},
+                            {}
+                        )
+
+                        CitasManager.instance.createCitas(
+                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
+                            "",
+                            "",
+                            "",
+                            "",
+                        )
+
+                        ContactosManager.instance.createContactos(
+                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
+                            "",
+                            "",
+                            "",
+                            "",
+                        )
+
+                        MedicinasManager.instance.createMedicinas(
+                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
+                            "",
+                            "",
+                            "",
+                        )
+
+                        ContactosDoctorManager.instance.createContactoDoctor(
+                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
+                            "",
+                            "",
+                            "",
+                        )
+                    }
+                }
         }
-
-
-
     }
 }

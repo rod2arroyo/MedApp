@@ -13,16 +13,18 @@ class ContactosManager {
     private val dbFirebase = Firebase.firestore
 
     fun createContactos(usuario: String,
-                 nombre: String,
-                        apellido: String,
+                        usuarioPersona: String,
+                        nombre: String,
+                        celular: String,
                         parentesco: String,
                  //callbackOK: (Long) -> Unit,
                  //callbackError: (String) -> Unit
     ){
 
         val data = hashMapOf<String,Any>(
+            "usuario" to usuarioPersona,
             "nombre" to nombre,
-            "apellido" to apellido,
+            "celular" to celular,
             "parentesco" to parentesco
         )
 
