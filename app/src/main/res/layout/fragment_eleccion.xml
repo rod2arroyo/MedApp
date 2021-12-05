@@ -4,33 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     >
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rviMedicinas"
-        android:layout_width="match_parent"
-        android:layout_height="482dp"
-
-
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="371dp"
+        android:layout_height="438dp"
+        android:layout_marginTop="12dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:itemCount="10"
-        tools:listitem="@layout/item_medicina" />
-    <Button
-        android:id="@+id/butagregarmedicina"
-        android:layout_width="137dp"
-        android:layout_height="109dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/imgmas"
-        android:text="_"
-        android:textColor="#00FFEB3B"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rviMedicinas" />
+        app:srcCompat="@drawable/fondopag" />
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="395dp"
@@ -45,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text=" Medicinas Pendientes"
+        android:text=" Contactos"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
 
         android:textStyle="bold"
@@ -53,5 +42,29 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/elegirfamiliar"
+        android:layout_width="176dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/butt"
+        android:text="Contacto Familiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <Button
+        android:id="@+id/elegirmedico"
+        android:layout_width="176dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/butt"
+        android:text="Contacto Medico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/elegirfamiliar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

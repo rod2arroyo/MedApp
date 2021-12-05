@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="398dp"
+        android:layout_height="119dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545"
+        app:srcCompat="@drawable/baseop" />
+
+    <Button
+        android:id="@+id/contactoborrar"
+        android:layout_width="49dp"
+        android:layout_height="36dp"
+        android:text="_"
+        android:textColor="#00FFEB3B"
+
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/imgx"
+        android:hapticFeedbackEnabled="false"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contadc"
+        android:layout_width="115dp"
+        android:layout_height="24dp"
+
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+
+        android:text="Contacto"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#493027"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:circularflow_radiusInDP="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/citanombre3"
+        android:layout_width="79dp"
+        android:layout_height="24dp"
+
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="56dp"
+
+        android:text="Nombre:"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:circularflow_radiusInDP="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/citanombre4"
+        android:layout_width="79dp"
+        android:layout_height="26dp"
+
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="88dp"
+
+        android:text="Numero:"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:circularflow_radiusInDP="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contactonumerotext"
+        android:layout_width="164dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/base1"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/citanombre4" />
+
+    <TextView
+        android:id="@+id/contactonombretext"
+        android:layout_width="164dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/base1"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/contactonumerotext"
+        app:layout_constraintStart_toEndOf="@+id/citanombre3" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="358dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/contactonombretext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/linea" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

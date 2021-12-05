@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="395dp"
+        android:layout_height="82dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/topborder" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="370dp"
+        android:layout_height="197dp"
+        android:layout_marginTop="92dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/baseop" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="301dp"
+        android:layout_height="163dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.382"
+        app:srcCompat="@drawable/baseclara" />
+
+    <TextView
+        android:id="@+id/citaespe"
+        android:layout_width="79dp"
+        android:layout_height="24dp"
+
+
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="Nombre:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="17sp"
+
+        android:textStyle="bold"
+        app:circularflow_radiusInDP="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/citadoctor"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/citadoctor"
+        android:layout_width="79dp"
+        android:layout_height="26dp"
+
+
+        android:layout_marginStart="16dp"
+
+        android:layout_marginBottom="4dp"
+        android:text="Horario:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+
+        app:circularflow_radiusInDP="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/citahorario"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/citahorario"
+        android:layout_width="79dp"
+        android:layout_height="26dp"
+
+
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="60dp"
+        android:text="Descripcion:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="17sp"
+
+        android:textStyle="bold"
+        app:circularflow_radiusInDP="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/nuevamedicinahorario"
+        android:layout_width="164dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/base1"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/nuevamedicinadescripcion"
+        app:layout_constraintStart_toEndOf="@+id/citadoctor" />
+
+    <EditText
+        android:id="@+id/nuevamedicinadescripcion"
+        android:layout_width="167dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/base1"
+        android:text="lalalaalal  und  dwdddw "
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/citahorario" />
+
+    <EditText
+        android:id="@+id/nuevamedicinanombre"
+        android:layout_width="164dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/base1"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/nuevamedicinahorario"
+        app:layout_constraintStart_toEndOf="@+id/citaespe" />
+
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text=" Agregar Mendicamento "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ingresarmedicamento"
+        android:layout_width="137dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/imgmas"
+        android:text="_"
+        android:textColor="#00FFEB3B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

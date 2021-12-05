@@ -10,6 +10,34 @@
         <entry key="..\:/MedApp/app/src/main/res/layout/fragment_medicinas.xml" value="0.34193840579710144" />
         <entry key="..\:/MedApp/app/src/main/res/layout/fragment_perfil.xml" value="0.34193840579710144" />
         <entry key="..\:/MedApp/app/src/main/res/menu/bottom_navigation.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.309375" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.309375" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/activity_main.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/activity_register.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_agregarcita.xml" value="0.25" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_agregarcontacto.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_agregarmedicina.xml" value="0.5" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_citas.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_contactos.xml" value="0.25" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_editarperfil.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_eleccion.xml" value="0.25" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_enviarmensaje.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_instalaciones.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_listadoctor.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_medicinas.xml" value="0.25" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_medicos.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_mensajes.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_perfil.xml" value="0.25" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/fragment_subirfoto.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/item_cita.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/item_contactoagregardoctor.xml" value="0.29322916666666665" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/item_contactofamiliar.xml" value="0.5" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/item_contactomedico.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/item_contactomensaje.xml" value="0.22" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/item_instalacion.xml" value="0.5" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/item_medicina.xml" value="0.33" />
+        <entry key="..\:/Users/Eldrick Mendoza/Desktop/8 ciclo OP/progra-movil/proyectos/MedApp/app/src/main/res/layout/item_mensaje.xml" value="0.33" />
       </map>
     </option>
   </component>
