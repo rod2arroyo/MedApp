@@ -32,10 +32,11 @@
         android:id="@+id/imageView4"
         android:layout_width="279dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="29dp"
+        android:layout_marginBottom="32dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:srcCompat="@drawable/baseclara" />
 
@@ -47,7 +48,7 @@
 
         android:layout_marginStart="16dp"
         android:layout_marginBottom="4dp"
-        android:text="Nombre:"
+        android:text="Centro:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#000000"
         android:textSize="17sp"
@@ -95,36 +96,36 @@
         app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
     <EditText
-        android:id="@+id/nuevacitadoctor"
+        android:id="@+id/txt_doctor_nuevo"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/nuevacitahorario"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txt_horario_nuevo"
         app:layout_constraintStart_toEndOf="@+id/citadoctor" />
 
     <EditText
-        android:id="@+id/nuevacitahorario"
+        android:id="@+id/txt_horario_nuevo"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
-        android:text="TextView"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintStart_toEndOf="@+id/citahorario" />
 
     <EditText
-        android:id="@+id/nuevacitanombre"
+        android:id="@+id/txt_centro_nuevo"
         android:layout_width="164dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/nuevacitadoctor"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txt_doctor_nuevo"
         app:layout_constraintStart_toEndOf="@+id/citaespe" />
 
 
@@ -143,7 +144,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ingresarcita"
+        android:id="@+id/btn_nueva_cita"
         android:layout_width="137dp"
         android:layout_height="109dp"
         android:layout_marginTop="36dp"

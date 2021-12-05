@@ -1,18 +1,37 @@
 package com.example.medapp.model
 
+import android.content.Context
+import com.example.medapp.Clases.Citas
+import com.example.medapp.Clases.ContactoFamiliar
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class CitasManager {
-    companion object{
-        var instance : CitasManager = CitasManager()
-            private set
-    }
-
-
+class CitasManager(context: Context) {
     private val dbFirebase = Firebase.firestore
 
-    fun createCitas(usuario: String,
+    fun getCitasFB(callbackOK: (List<Citas>) -> Unit, callbackError:(String)->Unit){
+        dbFirebase.collection("Citas")
+            .document("wenas")
+            .collection("Agenda")
+            .get()
+            .addOnSuccessListener { res ->
+                val listCitas = arrayListOf<Citas>()
+                for(document in res){
+                    val conta = Citas(
+                        cMedico = document.data["cMedico"]!! as String,
+                        doctor = document.data["doctor"]!! as String,
+                        horario = document.data["horario"]!! as String,
+                    )
+                    listCitas.add(conta)
+                }
+                callbackOK(listCitas)
+            }
+            .addOnFailureListener{
+                callbackError(it.message!!)
+            }
+    }
+
+    /*fun createCitas(usuario: String,
                  nombre: String,
                  doctor: String,
                  especialidad: String,
@@ -39,5 +58,5 @@ class CitasManager {
             .addOnFailureListener{
 
             }
-    }
+    }*/
 }

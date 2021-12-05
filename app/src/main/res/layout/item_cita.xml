@@ -29,7 +29,7 @@
         android:layout_marginStart="-15dp"
         android:layout_marginBottom="-7dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="@+id/citahorariotext"
+        app:layout_constraintBottom_toBottomOf="@+id/db_horario_cita"
         app:layout_constraintStart_toStartOf="@+id/citadoctor"
         app:srcCompat="@drawable/baseclara" />
 
@@ -132,18 +132,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/citadoctortext"
+        android:id="@+id/db_doctor_cita"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/citahorariotext"
+        app:layout_constraintBottom_toTopOf="@+id/db_horario_cita"
         app:layout_constraintStart_toEndOf="@+id/citadoctor" />
 
     <TextView
-        android:id="@+id/citahorariotext"
+        android:id="@+id/db_horario_cita"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
@@ -154,14 +154,14 @@
         app:layout_constraintStart_toEndOf="@+id/citahorario" />
 
     <TextView
-        android:id="@+id/citaespetext"
+        android:id="@+id/db_nombre_cita"
         android:layout_width="164dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/citadoctortext"
+        app:layout_constraintBottom_toTopOf="@+id/db_doctor_cita"
         app:layout_constraintStart_toEndOf="@+id/citaespe" />
 
     <ImageView
