@@ -110,4 +110,14 @@
         app:layout_constraintStart_toStartOf="@+id/imageView9"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
+    <Button
+        android:id="@+id/btn_desconectarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desconectarse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
