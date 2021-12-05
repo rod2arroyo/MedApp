@@ -20,7 +20,7 @@
         tools:itemCount="10"
         tools:listitem="@layout/item_mensaje" />
     <Button
-        android:id="@+id/butnuevomensaje"
+        android:id="@+id/btn_agregar_mensaje"
         android:layout_width="137dp"
         android:layout_height="109dp"
         android:layout_marginTop="16dp"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text=" Contactos"
+        android:text="Mensajes"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
 
         android:textStyle="bold"

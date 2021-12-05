@@ -89,7 +89,7 @@
         app:srcCompat="@drawable/perfilimg" />
 
     <Button
-        android:id="@+id/editardatosperfilbut"
+        android:id="@+id/btn_editar_datos"
         android:layout_width="230dp"
         android:layout_height="91dp"
         android:background="@drawable/editardatos"
@@ -100,7 +100,7 @@
         app:layout_constraintStart_toStartOf="@+id/imageView8" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_editar_foto"
         android:layout_width="56dp"
         android:layout_height="52dp"
         android:layout_marginTop="-30dp"

@@ -1,4 +1,4 @@
-package com.example.medapp.Fragments
+package com.example.medapp.FragmentsMedicina
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.medapp.R
 
-class ContactosFragment : Fragment(){
+class AgregarMedicinaFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_contactos,container,false)
+        return inflater.inflate(R.layout.fragment_agregarmedicina,container,false)
     }
 }

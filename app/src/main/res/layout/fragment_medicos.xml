@@ -21,7 +21,7 @@
         tools:itemCount="10"
         tools:listitem="@layout/item_contactomedico" />
     <Button
-        android:id="@+id/butagregarmedico"
+        android:id="@+id/btn_agregar_medico"
         android:layout_width="137dp"
         android:layout_height="109dp"
         android:layout_marginTop="16dp"
@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text=" Medicos"
+        android:text="Contactos Medicos"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
 
         android:textStyle="bold"

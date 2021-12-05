@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/butagregarcita"
+        android:id="@+id/btn_agregar_cita"
         android:layout_width="137dp"
         android:layout_height="109dp"
         android:layout_marginTop="12dp"
