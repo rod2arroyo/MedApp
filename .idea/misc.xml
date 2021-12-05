@@ -3,7 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/MedApp/app/src/main/res/layout/activity_login.xml" value="0.1762917933130699" />
+        <entry key="..\:/MedApp/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/MedApp/app/src/main/res/layout/activity_main.xml" value="0.1762917933130699" />
         <entry key="..\:/MedApp/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/MedApp/app/src/main/res/layout/fragment_agregarcita.xml" value="0.290625" />
@@ -28,6 +28,7 @@
         <entry key="..\:/MedApp/app/src/main/res/layout/item_contactofamiliar.xml" value="0.290625" />
         <entry key="..\:/MedApp/app/src/main/res/layout/item_contactomedico.xml" value="0.290625" />
         <entry key="..\:/MedApp/app/src/main/res/layout/item_contactomensaje.xml" value="0.290625" />
+        <entry key="..\:/MedApp/app/src/main/res/layout/item_instalacion.xml" value="0.36666666666666664" />
         <entry key="..\:/MedApp/app/src/main/res/layout/item_medicina.xml" value="0.36666666666666664" />
         <entry key="..\:/MedApp/app/src/main/res/layout/item_mensaje.xml" value="0.20572916666666666" />
         <entry key="..\:/MedApp/app/src/main/res/menu/bottom_navigation.xml" value="0.36666666666666664" />
