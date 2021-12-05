@@ -1,43 +1,33 @@
 package com.example.medapp.model
 
+import android.content.Context
+import com.example.medapp.Clases.ContactoFamiliar
+import com.example.medapp.Clases.Medicina
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class ContactosManager {
-    companion object{
-        var instance : ContactosManager = ContactosManager()
-            private set
-    }
-
-
+class ContactosManager (context: Context){
     private val dbFirebase = Firebase.firestore
 
-    fun createContactos(usuario: String,
-                        usuarioPersona: String,
-                        nombre: String,
-                        celular: String,
-                        parentesco: String,
-                 //callbackOK: (Long) -> Unit,
-                 //callbackError: (String) -> Unit
-    ){
-
-        val data = hashMapOf<String,Any>(
-            "usuario" to usuarioPersona,
-            "nombre" to nombre,
-            "celular" to celular,
-            "parentesco" to parentesco
-        )
-
-        val userId = usuario
-
+    fun getFamiliaresDB(callbackOK: (List<ContactoFamiliar>) -> Unit, callbackError:(String)->Unit){
         dbFirebase.collection("Contactos")
-            .document(userId)
-            .set(data)
-            .addOnSuccessListener {
-
+            .document("wenas")
+            .collection("Familiares")
+            .get()
+            .addOnSuccessListener { res ->
+                val listContactos = arrayListOf<ContactoFamiliar>()
+                for(document in res){
+                    val conta = ContactoFamiliar(
+                        usuario = document.data["usuario"]!! as String,
+                        nombre = document.data["nombre"]!! as String,
+                        numero = document.data["numero"]!! as String,
+                    )
+                    listContactos.add(conta)
+                }
+                callbackOK(listContactos)
             }
             .addOnFailureListener{
-
+                callbackError(it.message!!)
             }
     }
 }

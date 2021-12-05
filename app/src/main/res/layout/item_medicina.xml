@@ -25,7 +25,7 @@
         android:layout_width="347dp"
         android:layout_height="4dp"
         android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/medicinadescripcion"
+        app:layout_constraintBottom_toTopOf="@+id/txt_descripcion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,16 +47,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/medicinanombre"
+        android:id="@+id/txt_nombre_medicina"
         android:layout_width="79dp"
         android:layout_height="23dp"
-
-
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
-
         android:text="Medicina"
-
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#493027"
         android:textSize="17sp"
@@ -69,7 +65,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/medicinahora"
+        android:id="@+id/txt_horario"
         android:layout_width="59dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
@@ -77,14 +73,14 @@
         android:background="@drawable/borde"
         android:text="9:30 AM"
         android:textAlignment="center"
-        app:layout_constraintStart_toEndOf="@+id/medicinanombre"
+        app:layout_constraintStart_toEndOf="@+id/txt_nombre_medicina"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/medicinadescripcion"
+        android:id="@+id/txt_descripcion"
         android:layout_width="292dp"
         android:layout_height="65dp"
-        android:layout_marginStart="31dp"
+        android:layout_marginStart="28dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/base1"
         android:text="TextView"

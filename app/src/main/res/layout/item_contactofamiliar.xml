@@ -36,16 +36,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/contadc"
+        android:id="@+id/db_usuario_contacto"
         android:layout_width="115dp"
         android:layout_height="24dp"
-
-
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-
         android:text="Contacto"
-
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#493027"
         android:textSize="20dp"
@@ -102,7 +98,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/contactonumerotext"
+        android:id="@+id/db_numero_contacto"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
@@ -113,14 +109,14 @@
         app:layout_constraintStart_toEndOf="@+id/citanombre4" />
 
     <TextView
-        android:id="@+id/contactonombretext"
+        android:id="@+id/db_nombre_contacto"
         android:layout_width="164dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/base1"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/contactonumerotext"
+        app:layout_constraintBottom_toTopOf="@+id/db_numero_contacto"
         app:layout_constraintStart_toEndOf="@+id/citanombre3" />
 
     <ImageView

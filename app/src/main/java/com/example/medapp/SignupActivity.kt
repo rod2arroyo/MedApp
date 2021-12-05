@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.medapp.Clases.Medicina
 import com.example.medapp.model.*
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -52,7 +53,7 @@ class SignupActivity : Activity() {
                         Toast.makeText(this,"Ya esta registrada", Toast.LENGTH_SHORT).show()
                     }else if(!final!!){
                         final = true
-                        LoginManager.instance.saveUser(
+                        /*LoginManager.instance.saveUser(
                             findViewById<EditText>(R.id.txt_usuario).text.toString(),
                             findViewById<EditText>(R.id.txt_password).text.toString(),
                             {},
@@ -67,27 +68,25 @@ class SignupActivity : Activity() {
                             "",
                         )
 
-                        ContactosManager.instance.createContactos(
-                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
-                            "",
-                            "",
-                            "",
-                            "",
-                        )
-
-                        MedicinasManager.instance.createMedicinas(
-                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
-                            "",
-                            "",
-                            "",
-                        )
-
                         ContactosDoctorManager.instance.createContactoDoctor(
                             findViewById<EditText>(R.id.txt_usuario).text.toString(),
                             "",
                             "",
                             "",
+                        )*/
+
+                        /*LoginManager.instance.createMedicinas(
+                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
+                            "",
+                            "",
+                            "",
                         )
+                        LoginManager.instance.createContactos(
+                            findViewById<EditText>(R.id.txt_usuario).text.toString(),
+                            "",
+                            "",
+                            "",
+                        )*/
                     }
                 }
         }

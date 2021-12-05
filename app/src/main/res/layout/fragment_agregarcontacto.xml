@@ -95,36 +95,36 @@
         app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
     <EditText
-        android:id="@+id/nuevocontactonombre"
+        android:id="@+id/txt_nombre_nuevo"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/nuevocontactonumero"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txt_numero_nuevo"
         app:layout_constraintStart_toEndOf="@+id/citadoctor" />
 
     <EditText
-        android:id="@+id/nuevocontactonumero"
+        android:id="@+id/txt_numero_nuevo"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
-        android:text="TextView"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintStart_toEndOf="@+id/citahorario" />
 
     <EditText
-        android:id="@+id/nuevocontactousuario"
+        android:id="@+id/txt_usuario_nuevo"
         android:layout_width="164dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/nuevocontactonombre"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txt_nombre_nuevo"
         app:layout_constraintStart_toEndOf="@+id/citaespe" />
 
 
@@ -143,7 +143,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ingresarcontacto"
+        android:id="@+id/btn_ingresar_contacto"
         android:layout_width="137dp"
         android:layout_height="109dp"
         android:layout_marginTop="36dp"
