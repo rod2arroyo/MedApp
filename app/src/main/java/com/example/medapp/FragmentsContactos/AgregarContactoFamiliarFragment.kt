@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import com.example.medapp.R
+import com.example.medapp.usuarioactual
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -38,7 +39,7 @@ class AgregarContactoFamiliarFragment : Fragment() {
             )
 
             dbFirebase.collection("Contactos")
-                .document("wenas")
+                .document(usuarioactual)
                 .collection("Familiares")
                 .document(System.currentTimeMillis().toString())
                 .set(data)

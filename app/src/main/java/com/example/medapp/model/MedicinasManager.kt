@@ -2,6 +2,7 @@ package com.example.medapp.model
 
 import android.content.Context
 import com.example.medapp.Clases.Medicina
+import com.example.medapp.usuarioactual
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -10,7 +11,7 @@ class MedicinasManager(context: Context) {
 
     fun getMedicinaFB(callbackOK: (List<Medicina>) -> Unit,callbackError:(String)->Unit){
         dbFirebase.collection("Medicinas")
-            .document("wenas")
+            .document(usuarioactual)
             .collection("Farmacos")
             .get()
             .addOnSuccessListener { res ->

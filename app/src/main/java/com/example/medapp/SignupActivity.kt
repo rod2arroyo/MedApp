@@ -53,14 +53,14 @@ class SignupActivity : Activity() {
                         Toast.makeText(this,"Ya esta registrada", Toast.LENGTH_SHORT).show()
                     }else if(!final!!){
                         final = true
-                        /*LoginManager.instance.saveUser(
+                        LoginManager.instance.saveUser(
                             findViewById<EditText>(R.id.txt_usuario).text.toString(),
                             findViewById<EditText>(R.id.txt_password).text.toString(),
                             {},
                             {}
                         )
 
-                        CitasManager.instance.createCitas(
+                        /*CitasManager.instance.createCitas(
                             findViewById<EditText>(R.id.txt_usuario).text.toString(),
                             "",
                             "",

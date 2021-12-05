@@ -3,6 +3,7 @@ package com.example.medapp.model
 import android.content.Context
 import com.example.medapp.Clases.ContactoFamiliar
 import com.example.medapp.Clases.Medicina
+import com.example.medapp.usuarioactual
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -11,7 +12,7 @@ class ContactosManager (context: Context){
 
     fun getFamiliaresDB(callbackOK: (List<ContactoFamiliar>) -> Unit, callbackError:(String)->Unit){
         dbFirebase.collection("Contactos")
-            .document("wenas")
+            .document(usuarioactual)
             .collection("Familiares")
             .get()
             .addOnSuccessListener { res ->

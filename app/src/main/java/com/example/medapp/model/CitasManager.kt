@@ -3,6 +3,7 @@ package com.example.medapp.model
 import android.content.Context
 import com.example.medapp.Clases.Citas
 import com.example.medapp.Clases.ContactoFamiliar
+import com.example.medapp.usuarioactual
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -11,7 +12,7 @@ class CitasManager(context: Context) {
 
     fun getCitasFB(callbackOK: (List<Citas>) -> Unit, callbackError:(String)->Unit){
         dbFirebase.collection("Citas")
-            .document("wenas")
+            .document(usuarioactual)
             .collection("Agenda")
             .get()
             .addOnSuccessListener { res ->
