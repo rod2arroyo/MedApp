@@ -11,7 +11,7 @@ import com.example.medapp.FragmentsPerfil.PerfilFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-
+var usuarioactual : String = ""
 class MainActivity : AppCompatActivity() {
 
     val medicinasFragment = MedicinasFragment()
