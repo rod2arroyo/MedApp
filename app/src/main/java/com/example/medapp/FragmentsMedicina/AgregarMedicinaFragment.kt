@@ -1,12 +1,20 @@
 package com.example.medapp.FragmentsMedicina
 
+import android.app.Activity
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
+import com.example.medapp.Alarm.MyBroadcastReceiver
 import com.example.medapp.R
 import com.example.medapp.usuarioactual
 import com.google.firebase.firestore.ktx.firestore
@@ -49,6 +57,20 @@ class AgregarMedicinaFragment : Fragment() {
                 .addOnFailureListener{
 
                 }
+
+            Toast.makeText(context,"reminder",Toast.LENGTH_SHORT).show()
+            var intent : Intent = Intent(context,MyBroadcastReceiver::class.java)
+            var pendingIntent : PendingIntent = PendingIntent.getBroadcast(context,0,intent,0)
+
+            var alarmManager : AlarmManager =  activity?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+
+            var timeAtButtonClick : Long = System.currentTimeMillis()
+
+            var secondsMIllis : Long = (1000 * (horario.toLong()))* 60
+
+            alarmManager.set(AlarmManager.RTC_WAKEUP,
+                timeAtButtonClick + secondsMIllis,
+                pendingIntent)
         }
     }
 }
