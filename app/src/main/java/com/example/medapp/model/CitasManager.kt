@@ -19,6 +19,7 @@ class CitasManager(context: Context) {
                 val listCitas = arrayListOf<Citas>()
                 for(document in res){
                     val conta = Citas(
+                        id = document.id ,
                         cMedico = document.data["cMedico"]!! as String,
                         doctor = document.data["doctor"]!! as String,
                         horario = document.data["horario"]!! as String,

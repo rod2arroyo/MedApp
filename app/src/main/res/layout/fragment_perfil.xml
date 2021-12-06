@@ -47,12 +47,12 @@
         android:id="@+id/nombreperfiltext"
         android:layout_width="100dp"
         android:layout_height="37dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="40dp"
         android:text="Nombre"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#493027"
+        android:textColor="#000000"
         android:textSize="25dp"
         android:textStyle="bold"
         app:circularflow_radiusInDP="50dp"
@@ -69,7 +69,7 @@
         android:text="Edad"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#493027"
+        android:textColor="#000000"
         android:textSize="17sp"
         android:textStyle="bold"
         app:circularflow_radiusInDP="50dp"
@@ -77,6 +77,23 @@
         app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="@+id/nombreperfiltext"
         app:layout_constraintTop_toBottomOf="@+id/nombreperfiltext" />
+
+    <TextView
+        android:id="@+id/numeroperfiltext2"
+        android:layout_width="79dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:text="Numero"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:circularflow_radiusInDP="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/nombreperfiltext"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="@+id/nombreperfiltext"
+        app:layout_constraintTop_toBottomOf="@+id/edadperfiltext" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -92,17 +109,19 @@
         android:id="@+id/btn_editar_datos"
         android:layout_width="230dp"
         android:layout_height="91dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/editardatos"
         android:text="_"
         android:textColor="#00FFEB3B"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
         app:layout_constraintEnd_toEndOf="@+id/imageView8"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="@+id/imageView8" />
 
     <Button
         android:id="@+id/btn_editar_foto"
-        android:layout_width="56dp"
-        android:layout_height="52dp"
+        android:layout_width="50dp"
+        android:layout_height="43dp"
         android:layout_marginTop="-30dp"
         android:background="@drawable/insimagen"
         android:text="_"
@@ -112,12 +131,17 @@
 
     <Button
         android:id="@+id/btn_desconectarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="154dp"
+        android:layout_height="61dp"
+        android:background="@drawable/borde"
+        android:backgroundTint="#80BA2A2A"
+        android:hapticFeedbackEnabled="true"
         android:text="Desconectarse"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.184" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

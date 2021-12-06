@@ -18,6 +18,7 @@ class MedicinasManager(context: Context) {
                 val listMedicina = arrayListOf<Medicina>()
                 for(document in res){
                     val medi = Medicina(
+                        id = document.id ,
                         nombre = document.data["nombre"]!! as String,
                         horario = document.data["horario"]!! as String,
                         descripcion = document.data["descripcion"]!! as String,

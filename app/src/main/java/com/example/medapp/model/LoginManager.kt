@@ -20,7 +20,10 @@ class LoginManager {
 
         val data = hashMapOf<String,Any>(
             "usuario" to usuario,
-            "password" to password
+            "password" to password,
+            "nombre" to "",
+            "edad" to "",
+            "numero" to "",
         )
 
         dbFirebase.collection("Usuarios")

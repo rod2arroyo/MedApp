@@ -10,7 +10,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rviFamiliares"
         android:layout_width="413dp"
-        android:layout_height="482dp"
+        android:layout_height="352dp"
 
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"

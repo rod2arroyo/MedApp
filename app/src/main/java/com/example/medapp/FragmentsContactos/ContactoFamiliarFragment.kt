@@ -17,6 +17,9 @@ import com.example.medapp.FragmentsMedicina.AgregarMedicinaFragment
 import com.example.medapp.R
 import com.example.medapp.model.ContactosManager
 import com.example.medapp.model.MedicinasManager
+import com.example.medapp.usuarioactual
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class ContactoFamiliarFragment : Fragment() {
     override fun onCreateView(
@@ -41,10 +44,46 @@ class ContactoFamiliarFragment : Fragment() {
         }
 
         ContactosManager(requireActivity().applicationContext).getFamiliaresDB({ contList:List<ContactoFamiliar> ->
+
             rviFamilires.adapter = ContactosFamiliaresAdapter(
                 contList,
                 this
-            )
+
+            ) {
+
+                var x = 0
+                ContactosManager(requireActivity().applicationContext).getFamiliaresDB({ contList: List<ContactoFamiliar> ->
+
+                    for(i in 0..(contList.size-1)){
+                        if(contList[i].id==it){
+                            x=i
+                        }
+                    }
+
+                    println("----------->>> id a eliminar -------->>>>" + it )
+                    val dbFirebase = Firebase.firestore
+                    dbFirebase.collection("Contactos").document(usuarioactual).collection("Familiares").document(it).delete()
+
+                    //rviFamilires.adapter?.notifyItemRemoved(x)
+                    rviFamilires.adapter?.notifyItemRemoved(x)
+
+                    val fragment = ContactoFamiliarFragment()
+                    activity?.getSupportFragmentManager()?.beginTransaction()
+                        ?.replace(R.id.frame_container, fragment, "fragmnetId")
+                        ?.addToBackStack(null)
+                        ?.commit();
+                    //rviFamilires.adapter?.notifyItemRangeChanged(x,contList.size-1)
+                   // rviFamilires.adapter?.notifyDataSetChanged()
+                }) { error ->
+                    Log.e("PokemonFragment", error)
+                    Toast.makeText(activity, "Error" + error, Toast.LENGTH_SHORT).show()
+                }
+
+
+
+             //   rviFamilires.adapter?.notifyItemRemoved(x)
+           //     rviFamilires.adapter?.notifyDataSetChanged()
+            }
         }){error ->
             Log.e("PokemonFragment", error)
             Toast.makeText(activity, "Error" + error, Toast.LENGTH_SHORT).show()

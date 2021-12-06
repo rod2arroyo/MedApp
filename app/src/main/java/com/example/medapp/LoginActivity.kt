@@ -40,8 +40,13 @@ class LoginActivity : Activity() {
                     val listUsuarios = arrayListOf<Usuario>()
                     for(document in res){
                         val user = Usuario(
+                            id = document.id ,
                             usuario = document.data["usuario"]!! as String,
                             password = document.data["password"]!! as String,
+                            nombre = document.data["nombre"]!! as String,
+                            edad = document.data["edad"]!! as String,
+                            numero = document.data["numero"]!! as String,
+
                         )
                         listUsuarios.add(user)
                     }

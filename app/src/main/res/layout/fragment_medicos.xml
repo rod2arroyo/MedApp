@@ -20,6 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         tools:itemCount="10"
         tools:listitem="@layout/item_contactomedico" />
+
     <Button
         android:id="@+id/btn_agregar_medico"
         android:layout_width="137dp"
@@ -28,6 +29,7 @@
         android:background="@drawable/imgmas"
         android:text="_"
         android:textColor="#00FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rviMedicos" />

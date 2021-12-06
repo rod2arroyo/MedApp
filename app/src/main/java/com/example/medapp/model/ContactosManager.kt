@@ -19,6 +19,7 @@ class ContactosManager (context: Context){
                 val listContactos = arrayListOf<ContactoFamiliar>()
                 for(document in res){
                     val conta = ContactoFamiliar(
+                        id = document.id ,
                         usuario = document.data["usuario"]!! as String,
                         nombre = document.data["nombre"]!! as String,
                         numero = document.data["numero"]!! as String,
