@@ -10,10 +10,10 @@
         android:id="@+id/rviMedicinas"
         android:layout_width="match_parent"
         android:layout_height="482dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="40dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         tools:itemCount="10"
@@ -23,13 +23,12 @@
         android:id="@+id/btn_agregar_medicina"
         android:layout_width="137dp"
         android:layout_height="109dp"
-        android:layout_marginTop="8dp"
         android:background="@drawable/imgmas"
         android:text="_"
         android:textColor="#00FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/rviMedicinas" />
 
     <ImageView
         android:id="@+id/imageView5"

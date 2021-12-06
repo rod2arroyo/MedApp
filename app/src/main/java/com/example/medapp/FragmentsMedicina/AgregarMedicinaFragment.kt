@@ -66,7 +66,7 @@ class AgregarMedicinaFragment : Fragment() {
 
             var timeAtButtonClick : Long = System.currentTimeMillis()
 
-            var secondsMIllis : Long = (1000 * (horario.toLong()))* 60
+            var secondsMIllis : Long = (1000 * (horario.toLong())) * 3600
 
             alarmManager.set(AlarmManager.RTC_WAKEUP,
                 timeAtButtonClick + secondsMIllis,
