@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewmensaje"
         android:layout_width="329dp"
         android:layout_height="64dp"
         android:scaleType="fitXY"
@@ -35,7 +35,7 @@
         app:circularflow_radiusInDP="50dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageViewmensaje"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView

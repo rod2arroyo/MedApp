@@ -33,6 +33,7 @@ class CitasFragment  : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val btnAgregarCita = view.findViewById<Button>(R.id.btn_agregar_cita)
         val rviCitas = view.findViewById<RecyclerView>(R.id.rviCitas)
 

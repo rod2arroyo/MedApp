@@ -18,7 +18,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvicontactosmensaje"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="150dp"
 
 
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -53,29 +53,40 @@
         app:srcCompat="@drawable/baseclara" />
 
 
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="290dp"
+        android:layout_height="4dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/nuevomensajetext"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:srcCompat="@drawable/linea" />
+
     <TextView
-        android:id="@+id/citahorario"
+        android:id="@+id/usermen"
         android:layout_width="79dp"
         android:layout_height="26dp"
 
-    android:textAlignment="center"
-        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
         android:text="Mensaje"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#000000"
 
+        android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
         app:circularflow_radiusInDP="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
         app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+        app:layout_constraintHorizontal_bias="0.306"
+        app:layout_constraintStart_toStartOf="@+id/imageView4" />
 
     <EditText
         android:id="@+id/nuevomensajetext"
         android:layout_width="293dp"
         android:layout_height="76dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/base1"
         android:text="hola como estas"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
@@ -100,13 +111,32 @@
         android:id="@+id/enviarmensaje"
         android:layout_width="137dp"
         android:layout_height="109dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:background="@drawable/imgmas"
         android:text="_"
         android:textColor="#00FFEB3B"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/actuabutton"
+        android:layout_width="33dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/carga"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="42dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/persona"
+        app:layout_constraintBottom_toTopOf="@+id/imageView14"
+        app:layout_constraintEnd_toStartOf="@+id/usermen" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
