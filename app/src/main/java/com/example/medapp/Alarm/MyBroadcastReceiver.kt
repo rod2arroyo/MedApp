@@ -11,7 +11,7 @@ import com.example.medapp.R
 class MyBroadcastReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         var builder : NotificationCompat.Builder = NotificationCompat.Builder(context!!,"notifyLemubit")
-            .setSmallIcon(R.drawable.ic_launcher_background)
+            .setSmallIcon(R.drawable.ic_medicinas)
             .setContentTitle("Debe tomar sus medicamentos")
             .setContentText("Acceda a la aplicacion para verificar la medicina que debe tomar")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
