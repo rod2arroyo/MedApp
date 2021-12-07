@@ -70,20 +70,34 @@ class AgregarMedicinaFragment : Fragment() {
             println(" hora fijada: " + horaFijada)
             println(" minutos fijada: " + minutoFijado)
 
-            /*dbFirebase.collection("Medicinas")
+            var horaOficial : Long = 0
+            var minutoOficial : Long = 0
+
+            if(horaActual == horaFijada){
+                horaOficial = 0
+                minutoOficial = abs(minutoActual-minutoFijado)
+                println("minuto ificial $minutoOficial")
+            }else if(horaFijada > horaActual){
+                horaOficial = abs(horaFijada - (horaActual+1))
+                minutoOficial = abs((60 -minutoActual) + minutoFijado)
+                println("minuto oficial $minutoOficial")
+                println("hora oficial $horaOficial")
+            }
+
+            dbFirebase.collection("Medicinas")
                 .document(usuarioactual)
                 .collection("Farmacos")
                 .document(System.currentTimeMillis().toString())
                 .set(data)
                 .addOnSuccessListener {}
-                .addOnFailureListener{}*/
+                .addOnFailureListener{}
 
-            Toast.makeText(context,"reminder",Toast.LENGTH_SHORT).show()
+            Toast.makeText(context,"Alarma para la medicina establecida",Toast.LENGTH_SHORT).show()
             var intent : Intent = Intent(context,MyBroadcastReceiver::class.java)
             var pendingIntent : PendingIntent = PendingIntent.getBroadcast(context,0,intent,0)
             var alarmManager : AlarmManager =  activity?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             var timeAtButtonClick : Long = System.currentTimeMillis()
-            var tiempo : Long = (1000 * 3600 * abs(horaActual - horaFijada) ) + (1000 * 60 * abs(minutoActual - minutoFijado))
+            var tiempo : Long = (1000 * 3600 * horaOficial ) + (1000 * 60 * minutoOficial)
             //var secondsMIllis : Long = (1000 * (horario.toLong())) * 3600
             alarmManager.set(AlarmManager.RTC_WAKEUP,
                 timeAtButtonClick + tiempo,

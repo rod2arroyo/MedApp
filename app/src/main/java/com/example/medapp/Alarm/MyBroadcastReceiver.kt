@@ -12,12 +12,10 @@ class MyBroadcastReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         var builder : NotificationCompat.Builder = NotificationCompat.Builder(context!!,"notifyLemubit")
             .setSmallIcon(R.drawable.ic_launcher_background)
-            .setContentTitle("HOLA")
-            .setContentText("HOLA 2")
+            .setContentTitle("Debe tomar sus medicamentos")
+            .setContentText("Acceda a la aplicacion para verificar la medicina que debe tomar")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-
         var notificationManager : NotificationManagerCompat = NotificationManagerCompat.from(context)
-
         notificationManager.notify(200,builder.build())
     }
 }
