@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import com.example.medapp.FragmentsMedicina.MedicinasFragment
 import com.example.medapp.R
 import com.example.medapp.usuarioactual
 import com.google.firebase.firestore.ktx.firestore
@@ -43,12 +44,14 @@ class AgregarContactoFamiliarFragment : Fragment() {
                 .collection("Familiares")
                 .document(System.currentTimeMillis().toString())
                 .set(data)
-                .addOnSuccessListener {
+                .addOnSuccessListener {}
+                .addOnFailureListener{}
 
-                }
-                .addOnFailureListener{
-
-                }
+            val fragmentB = ContactoFamiliarFragment()
+            activity?.getSupportFragmentManager()?.beginTransaction()
+                ?.replace(R.id.frame_container, fragmentB, "fragmnetId")
+                ?.addToBackStack(null)
+                ?.commit();
         }
     }
 }

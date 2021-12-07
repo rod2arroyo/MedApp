@@ -46,12 +46,13 @@ class SignupActivity : Activity() {
                     }
 
                     if(userActual.text.toString() == ""){
-                        Toast.makeText(this,"Esta vacio el espacio", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"Los datos estan vacios", Toast.LENGTH_SHORT).show()
                     }else if(final!!){
                         final = false
                         println("SALIO ESTA COSA $final")
                         Toast.makeText(this,"Ya esta registrada", Toast.LENGTH_SHORT).show()
                     }else if(!final!!){
+                        Toast.makeText(this,"Cuenta correctamente creada",Toast.LENGTH_SHORT).show()
                         final = true
                         LoginManager.instance.saveUser(
                             findViewById<EditText>(R.id.txt_usuario).text.toString(),
@@ -59,6 +60,10 @@ class SignupActivity : Activity() {
                             {},
                             {}
                         )
+
+                        val intent: Intent = Intent()
+                        intent.setClass(this, LoginActivity::class.java)
+                        startActivity(intent)
 
                         /*CitasManager.instance.createCitas(
                             findViewById<EditText>(R.id.txt_usuario).text.toString(),

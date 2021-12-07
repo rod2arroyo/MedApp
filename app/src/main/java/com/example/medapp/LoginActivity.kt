@@ -62,7 +62,7 @@ class LoginActivity : Activity() {
                     if(final){
                         usuarioactual = findViewById<EditText>(R.id.edt_user_login).text.toString()
                         final = false
-                        Toast.makeText(this,"Si esta registrado",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"Inicio de sesion correcto",Toast.LENGTH_SHORT).show()
                         val intent: Intent = Intent()
                         intent.setClass(this, MainActivity::class.java)
                         startActivity(intent)

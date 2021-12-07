@@ -41,7 +41,6 @@ class AgregarMedicinaFragment : Fragment() {
         val dbFirebase = Firebase.firestore
         val agregarFarmaco = view.findViewById<Button>(R.id.btn_agregar_farmaco)
 
-
         agregarFarmaco.setOnClickListener{v: View ->
             val nombre = view.findViewById<EditText>(R.id.txt_nombre_med).text.toString()
             val horario = view.findViewById<EditText>(R.id.txt_horario).text.toString()
@@ -102,6 +101,12 @@ class AgregarMedicinaFragment : Fragment() {
             alarmManager.set(AlarmManager.RTC_WAKEUP,
                 timeAtButtonClick + tiempo,
                 pendingIntent)
+
+            val fragmentB = MedicinasFragment()
+            activity?.getSupportFragmentManager()?.beginTransaction()
+                ?.replace(R.id.frame_container, fragmentB, "fragmnetId")
+                ?.addToBackStack(null)
+                ?.commit();
 
         }
     }
