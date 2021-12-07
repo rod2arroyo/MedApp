@@ -3,7 +3,10 @@ package com.example.medapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.medapp.Clases.CentroMedico
 import com.example.medapp.FragmentsCitas.CitasFragment
+import com.example.medapp.FragmentsContactos.AgregarContactoMedicoFragment
+import com.example.medapp.FragmentsContactos.ContactoMedicoFragment
 import com.example.medapp.FragmentsContactos.ContactosFragment
 import com.example.medapp.FragmentsMedicina.MedicinasFragment
 import com.example.medapp.FragmentsMensajes.MensajesFragment
@@ -12,8 +15,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 var usuarioactual : String = ""
-class MainActivity : AppCompatActivity() {
+var centroMedico = CentroMedico("")
+var nombreacual = "xxxx"
+var conteo = 0
+var usuariodestino = "xxxx"
 
+class MainActivity : AppCompatActivity() , ContactoMedicoFragment.OnCentroMedicoSelected, AgregarContactoMedicoFragment.OnMenuClicked{
     val medicinasFragment = MedicinasFragment()
     val contactosFragment = ContactosFragment()
     val perfilFragment = PerfilFragment()
@@ -52,6 +59,15 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    private fun changeCentroDetailFragment(centro: CentroMedico) {
+        val fragment = AgregarContactoMedicoFragment()
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.frame_container, fragment)
+        ft.addToBackStack(null)
+        centroMedico=centro
+        ft.commit()
+    }
+
     private fun replaceFragment(fragment : Fragment){
         if (fragment != null){
             val transaction = supportFragmentManager.beginTransaction()
@@ -61,6 +77,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onSelect(centro: CentroMedico) {
+        changeCentroDetailFragment(centro)
+    }
+
+    override fun OnClick(menuName: String) {
+        if(menuName == "verinfo"){
+            //
+        }
+        else if(menuName == "favoritoop"){
+
+        }
+        else if(menuName == "pokes"){
+
+        }
+    }
 
 
 }
