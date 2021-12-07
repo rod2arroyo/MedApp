@@ -88,7 +88,7 @@ class AgregarMensajeFragment : Fragment() {
                 .addOnFailureListener{
                     println("----------->>> nnnnnnnnnnnnnnnnnnnnnnnn -------->>>>"  )
                 }
-
+            Toast.makeText(activity, "Se envio el mensaje correctamente" , Toast.LENGTH_SHORT).show()
             val fragment = MensajesFragment()
             activity?.getSupportFragmentManager()?.beginTransaction()
                 ?.replace(R.id.frame_container, fragment, "fragmnetId")

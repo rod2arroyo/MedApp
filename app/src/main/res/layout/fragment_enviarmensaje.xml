@@ -119,16 +119,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <Button
-        android:id="@+id/actuabutton"
-        android:layout_width="33dp"
-        android:layout_height="29dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="6dp"
-        android:background="@drawable/carga"
-        app:layout_constraintBottom_toTopOf="@+id/imageView14"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="42dp"

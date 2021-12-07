@@ -30,7 +30,7 @@ class PerfilFragment  : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val btnEditarDatos = view.findViewById<Button>(R.id.btn_editar_datos)
-        val btnEditarFoto = view.findViewById<Button>(R.id.btn_editar_foto)
+        //val btnEditarFoto = view.findViewById<Button>(R.id.btn_editar_foto)
         val btnLogout = view.findViewById<Button>(R.id.btn_desconectarse)
 
         val nombreperfiltext = view.findViewById<TextView>(R.id.nombreperfiltext)
@@ -73,13 +73,13 @@ class PerfilFragment  : Fragment(){
                 ?.commit();
         }
 
-        btnEditarFoto.setOnClickListener{
+        /*btnEditarFoto.setOnClickListener{
             val fragment = EditarFotoFragment()
             activity?.getSupportFragmentManager()?.beginTransaction()
                 ?.replace(R.id.frame_container, fragment, "fragmnetId")
                 ?.addToBackStack(null)
                 ?.commit();
-        }
+        }*/
 
         btnLogout.setOnClickListener{
             val intent = Intent(this.requireContext(), LoginActivity::class.java)

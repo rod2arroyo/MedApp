@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.medapp.FragmentsMedicina.MedicinasFragment
 import com.example.medapp.R
@@ -46,6 +47,8 @@ class AgregarContactoFamiliarFragment : Fragment() {
                 .set(data)
                 .addOnSuccessListener {}
                 .addOnFailureListener{}
+
+            Toast.makeText(context,"Contacto Familiar Agregado correctamente", Toast.LENGTH_SHORT).show()
 
             val fragmentB = ContactoFamiliarFragment()
             activity?.getSupportFragmentManager()?.beginTransaction()

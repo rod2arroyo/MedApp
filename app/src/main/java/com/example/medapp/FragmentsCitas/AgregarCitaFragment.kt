@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.medapp.FragmentsContactos.AgregarContactoFamiliarFragment
 import com.example.medapp.FragmentsMedicina.MedicinasFragment
@@ -47,6 +48,7 @@ class AgregarCitaFragment :Fragment() {
                 .addOnSuccessListener {}
                 .addOnFailureListener{}
 
+            Toast.makeText(activity, "Se agrego la cita correctamente" ,Toast.LENGTH_SHORT).show()
             val fragmentB = CitasFragment()
             activity?.getSupportFragmentManager()?.beginTransaction()
                 ?.replace(R.id.frame_container, fragmentB, "fragmnetId")
