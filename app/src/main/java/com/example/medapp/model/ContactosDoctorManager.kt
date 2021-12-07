@@ -20,6 +20,7 @@ class ContactosDoctorManager (context: Context) {
                 val listDoctores = arrayListOf<ContactoMedico>()
                 for(document in res){
                     val doc = ContactoMedico(
+                        id = document.data["nombre"]!! as String,
                         nombre = document.data["nombre"]!! as String,
                         especialidad = document.data["especialidad"]!! as String,
                         numero = document.data["numero"] as String,
