@@ -23,6 +23,7 @@ import com.example.medapp.model.ContactosDoctorManager
 import com.example.medapp.model.ContactosManager
 import com.example.medapp.model.MedicinasManager
 import com.example.medapp.usuarioactual
+import com.example.medapp.usuariodestino
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -57,6 +58,50 @@ class AgregarContactoMedicoFragment : Fragment(){
                 docList,
                 this
             ){
+                var valid = 0
+                ContactosManager(requireActivity().applicationContext).getMedicosContactosFB({ contList:List<ContactoMedico> ->
+
+                    for(i in 0..(contList.size-1)){
+                        if(contList[i].nombre==it.nombre){
+                            valid += 1
+                        }
+                    }
+                    if(valid==0){
+
+                        val dbFirebase = Firebase.firestore
+                        // meter
+                        val data = hashMapOf<String,Any>(
+                            "nombre" to it.nombre,
+                            "especialidad" to it.especialidad,
+                            "numero" to it.numero
+                        )
+
+                        dbFirebase.collection("ContactosMedicos")
+                            .document(usuarioactual)
+                            .collection("Doctores")
+                            .document(System.currentTimeMillis().toString())
+                            .set(data)
+                            .addOnSuccessListener {
+                                println("----------->>> ssssssssssssssssssssss -------->>>>"  )
+                            }
+                            .addOnFailureListener{
+                                println("----------->>> nnnnnnnnnnnnnnnnnnnnnnnn -------->>>>"  )
+                            }
+
+                        Toast.makeText(activity, "Doctor agregado a contactos!!", Toast.LENGTH_SHORT).show()
+
+                    }else{
+                        Toast.makeText(activity, "Doctor ya en contactos", Toast.LENGTH_SHORT).show()
+                    }
+
+
+                }){error ->
+                    Log.e("PokemonFragment", error)
+                    Toast.makeText(activity, "Error" + error, Toast.LENGTH_SHORT).show()
+                }
+
+
+
             }
         }){error ->
             Log.e("PokemonFragment", error)

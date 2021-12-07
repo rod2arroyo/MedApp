@@ -13,6 +13,7 @@
         android:layout_height="482dp"
 
 
+        android:layout_marginTop="72dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,14 +26,14 @@
         android:id="@+id/btn_agregar_medico"
         android:layout_width="137dp"
         android:layout_height="109dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/imgmas"
         android:text="_"
         android:textColor="#00FFEB3B"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rviMedicos" />
+        app:layout_constraintTop_toBottomOf="@+id/listamedicos" />
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="395dp"

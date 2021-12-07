@@ -16,12 +16,12 @@ import com.example.medapp.R
 class DoctoresAdapter (
     private val listDoctores: List<ContactoMedico>,
     private val fragment: Fragment,
-    val agregar: (String) -> Unit):
+    val agregar: (ContactoMedico) -> Unit):
     RecyclerView.Adapter<DoctoresAdapter.ViewHolder>(){
 
         class ViewHolder(view: View,
                          val listDoctores: List<ContactoMedico>,
-                         val agregar: (String) -> Unit) : RecyclerView.ViewHolder(view),
+                         val agregar: (ContactoMedico) -> Unit) : RecyclerView.ViewHolder(view),
                          View.OnClickListener{
 
             val nombre : TextView
@@ -35,6 +35,8 @@ class DoctoresAdapter (
                 numero = view.findViewById(R.id.db_numero_doctor_contacto)
                 bute = view.findViewById(R.id.btn_agregar_doctor)
                 bute.setOnClickListener {
+                    val name = listDoctores[position]
+                    agregar(name)
 
                 }
                 view.setOnClickListener(this)

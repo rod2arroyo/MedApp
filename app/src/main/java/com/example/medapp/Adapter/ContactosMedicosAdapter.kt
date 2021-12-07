@@ -34,7 +34,9 @@ class ContactosMedicosAdapter (
             numero = view.findViewById(R.id.doctornumerotext)
             bute = view.findViewById(R.id.doctorborrar)
             bute.setOnClickListener {
-
+                val name = listContactoMedico[position].id
+                eliminar(name)
+                bute.setBackgroundColor(Color.RED)
             }
             view.setOnClickListener(this)
 

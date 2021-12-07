@@ -13,6 +13,7 @@ import com.example.medapp.Adapter.ContactosFamiliaresAdapter
 import com.example.medapp.Adapter.ContactosMedicosAdapter
 import com.example.medapp.Clases.ContactoFamiliar
 import com.example.medapp.Clases.ContactoMedico
+import com.example.medapp.FragmentsMensajes.MensajesFragment
 import com.example.medapp.R
 import com.example.medapp.model.ContactosManager
 import com.example.medapp.usuarioactual
@@ -39,8 +40,15 @@ class ContactosMedicosGeneralFragment : Fragment() {
             rviDoctores.adapter = ContactosMedicosAdapter(
                 contList,
                 this
+            ){
+                val dbFirebase = Firebase.firestore
+                dbFirebase.collection("ContactosMedicos").document(usuarioactual).collection("Doctores").document(it).delete()
 
-            ) {
+                val fragment = ContactosMedicosGeneralFragment()
+                activity?.getSupportFragmentManager()?.beginTransaction()
+                    ?.replace(R.id.frame_container, fragment, "fragmnetId")
+                    ?.addToBackStack(null)
+                    ?.commit();
             }
         }){error ->
             Log.e("PokemonFragment", error)
