@@ -1,5 +1,6 @@
 package com.example.medapp.FragmentsContactos
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -19,12 +20,23 @@ import com.example.medapp.model.CentrosMedicosManager
 import com.example.medapp.model.ContactosManager
 
 class ContactoMedicoFragment : Fragment() {
+    interface OnCentroMedicoSelected{
+        fun onSelect(centro: CentroMedico)
+    }
+
+    private var listener : OnCentroMedicoSelected? = null
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_instalaciones,container,false)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        listener = context as OnCentroMedicoSelected
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -36,7 +48,9 @@ class ContactoMedicoFragment : Fragment() {
             rviInstalaciones.adapter = CentrosAdapter(
                 centList,
                 this
-            )
+            ){centro : CentroMedico ->
+                listener?.onSelect(centro)
+            }
         }){error ->
             Log.e("PokemonFragment", error)
             Toast.makeText(activity, "Error" + error, Toast.LENGTH_SHORT).show()

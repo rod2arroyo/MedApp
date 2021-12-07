@@ -5,6 +5,7 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import com.example.medapp.Alarm.MyBroadcastReceiver
@@ -19,6 +21,10 @@ import com.example.medapp.R
 import com.example.medapp.usuarioactual
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.lang.Math.abs
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.time.format.FormatStyle
 
 class AgregarMedicinaFragment : Fragment() {
     override fun onCreateView(
@@ -29,6 +35,7 @@ class AgregarMedicinaFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_agregarmedicina,container,false)
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val dbFirebase = Firebase.firestore
@@ -46,31 +53,42 @@ class AgregarMedicinaFragment : Fragment() {
                 "descripcion" to descripcion
             )
 
-            dbFirebase.collection("Medicinas")
+            val currentDateTime = LocalDateTime.now()
+            val horarioActual : String = currentDateTime.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))
+
+            var split : List<String> = horarioActual.split(":")
+            var horaActual : Long = split[0].toLong()
+            var minutoActual : Long = (split[1].substring(0,split[1].indexOf(" "))).toLong()
+
+            println(" hora actual: " + horaActual)
+            println(" minutos actual: " + minutoActual)
+
+            var split2 : List<String> = horario.split(":")
+            var horaFijada : Long = split2[0].toLong()
+            var minutoFijado : Long = split2[1].toLong()
+
+            println(" hora fijada: " + horaFijada)
+            println(" minutos fijada: " + minutoFijado)
+
+            /*dbFirebase.collection("Medicinas")
                 .document(usuarioactual)
                 .collection("Farmacos")
                 .document(System.currentTimeMillis().toString())
                 .set(data)
-                .addOnSuccessListener {
-
-                }
-                .addOnFailureListener{
-
-                }
+                .addOnSuccessListener {}
+                .addOnFailureListener{}*/
 
             Toast.makeText(context,"reminder",Toast.LENGTH_SHORT).show()
             var intent : Intent = Intent(context,MyBroadcastReceiver::class.java)
             var pendingIntent : PendingIntent = PendingIntent.getBroadcast(context,0,intent,0)
-
             var alarmManager : AlarmManager =  activity?.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-
             var timeAtButtonClick : Long = System.currentTimeMillis()
-
-            var secondsMIllis : Long = (1000 * (horario.toLong())) * 3600
-
+            var tiempo : Long = (1000 * 3600 * abs(horaActual - horaFijada) ) + (1000 * 60 * abs(minutoActual - minutoFijado))
+            //var secondsMIllis : Long = (1000 * (horario.toLong())) * 3600
             alarmManager.set(AlarmManager.RTC_WAKEUP,
-                timeAtButtonClick + secondsMIllis,
+                timeAtButtonClick + tiempo,
                 pendingIntent)
+
         }
     }
 }
