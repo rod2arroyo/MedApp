@@ -32,7 +32,7 @@ class ContactosFragment : Fragment(){
         }
 
         btnContactoMedico.setOnClickListener{
-            val fragment = ContactoMedicoFragment()
+            val fragment = ContactosMedicosGeneralFragment()
             activity?.getSupportFragmentManager()?.beginTransaction()
                 ?.replace(R.id.frame_container, fragment, "fragmnetId")
                 ?.addToBackStack(null)

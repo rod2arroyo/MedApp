@@ -35,9 +35,6 @@ class ContactosFamiliaresAdapter (
                 val name = listContactoFamiliar[position].id
                 eliminar(name)
                 bute.setBackgroundColor(Color.RED)
-
-
-
             }
             view.setOnClickListener(this)
 

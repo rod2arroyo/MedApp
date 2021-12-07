@@ -29,12 +29,12 @@
         android:layout_marginStart="-15dp"
         android:layout_marginBottom="-7dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="@+id/doctornumerotextagregar"
+        app:layout_constraintBottom_toBottomOf="@+id/db_numero_doctor_contacto"
         app:layout_constraintStart_toStartOf="@+id/citadoctor"
         app:srcCompat="@drawable/baseclara" />
 
     <Button
-        android:id="@+id/doctoragregarbut"
+        android:id="@+id/btn_agregar_doctor"
         android:layout_width="51dp"
         android:layout_height="52dp"
 
@@ -132,18 +132,18 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/doctorespetextagregar"
+        android:id="@+id/db_especialidad_contacto"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/doctornumerotextagregar"
+        app:layout_constraintBottom_toTopOf="@+id/db_numero_doctor_contacto"
         app:layout_constraintStart_toEndOf="@+id/citadoctor" />
 
     <TextView
-        android:id="@+id/doctornumerotextagregar"
+        android:id="@+id/db_numero_doctor_contacto"
         android:layout_width="164dp"
         android:layout_height="26dp"
         android:layout_marginStart="8dp"
@@ -154,14 +154,14 @@
         app:layout_constraintStart_toEndOf="@+id/citahorario" />
 
     <TextView
-        android:id="@+id/doctornombretextagregar"
+        android:id="@+id/db_doctor_contacto"
         android:layout_width="164dp"
         android:layout_height="24dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/base1"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/doctorespetextagregar"
+        app:layout_constraintBottom_toTopOf="@+id/db_especialidad_contacto"
         app:layout_constraintStart_toEndOf="@+id/citaespe" />
 
     <ImageView
